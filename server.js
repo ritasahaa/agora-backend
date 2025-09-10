@@ -1,9 +1,12 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const { RtcTokenBuilder, RtcRole } = require('agora-access-token');
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import pkg from 'agora-access-token';
 
 const app = express();
+dotenv.config();
+const { RtcTokenBuilder, RtcRole } = pkg;
+
 app.use(cors());
 app.use(express.json());
 
